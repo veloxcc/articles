@@ -1,0 +1,165 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "banner_with_caption": [],
+          "video": [],
+          "instagram": [],
+          "twitter": []
+        },
+        "choices": {
+          "text": {
+            "type": "Slice",
+            "fieldset": "Text",
+            "description": "Rich Text Section",
+            "icon": "text_fields",
+            "non-repeat": {
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label": "text",
+                  "placeholder": "Your content here"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "banner_with_caption": {
+            "type": "Slice",
+            "fieldset": "Banner with caption",
+            "description": "Banner with caption and button",
+            "icon": "chrome_reader_mode",
+            "non-repeat": {
+              "image_banner": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": null,
+                    "height": null
+                  },
+                  "thumbnails": [
+                    {
+                      "name": "crop_3x2",
+                      "width": 960,
+                      "height": 480
+                    },
+                    {
+                      "name": "crop_16x9",
+                      "width": 1024,
+                      "height": 576
+                    }
+                  ],
+                  "label": "Image Banner"
+                }
+              },
+              "title_of_banner": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "heading2",
+                  "label": "Title Of banner",
+                  "placeholder": "My title of banner"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Description",
+                  "placeholder": "My description"
+                }
+              },
+              "button_label": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label": "Button label",
+                  "placeholder": "Click Here"
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "Select the link"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "video": {
+            "type": "Slice",
+            "fieldset": "Video",
+            "description": "youtube, vimeo etc...",
+            "icon": "ondemand_video",
+            "display": "list",
+            "non-repeat": {
+              "source": {
+                "type": "Select",
+                "config": {
+                  "options": ["YouTube", "Vimeo"],
+                  "label": "Source"
+                }
+              },
+              "video_id": {
+                "type": "Text",
+                "config": {
+                  "label": "Video ID"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "instagram": {
+            "type": "Slice",
+            "fieldset": "Instagram",
+            "description": "Embed a Instragram post",
+            "icon": "photo_camera",
+            "display": "list",
+            "non-repeat": {
+              "post_url": {
+                "type": "Text",
+                "config": {
+                  "label": "Post URL"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "twitter": {
+            "type": "Slice",
+            "fieldset": "Twitter",
+            "description": "Embed a Tweet",
+            "icon": "announcement",
+            "display": "list",
+            "non-repeat": {
+              "tweet_id": {
+                "type": "Text",
+                "config": {
+                  "label": "Tweet Id"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  }
+}
