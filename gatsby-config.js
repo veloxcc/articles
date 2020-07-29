@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 module.exports = {
+  pathPrefix: process.env.PATH_PREFIX || '',
   plugins: [
     {
       resolve: 'gatsby-source-prismic',

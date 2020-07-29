@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
 
     {data.allPrismicArticle.nodes.map(({ id, uid, data }) => (
       <div key={id}>
-        <Link to={`/articles/${uid}`}>
+        <Link to={`/${uid}`}>
           <h3>{data.title.text}</h3>
         </Link>
       </div>

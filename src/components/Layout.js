@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
 
 import 'milligram';
 import './layout.css';
@@ -19,7 +18,7 @@ const Layout = ({ children, pageTitle }) => (
       <header>
         <div className="row">
           <div className="column">
-            <Link to="/">velox.cc</Link> / articles
+            <a href="/">velox.cc</a> / articles
           </div>
         </div>
       </header>
