@@ -42,7 +42,7 @@ const Article = ({ data: { prismicArticle } }) => {
   const { data } = prismicArticle;
   const { body: slices = [] } = data;
   return (
-    <Layout pageTitle={data.title.text}>
+    <Layout pageTitle={data.title.text} showLinkToIndex>
       <h1>{data.title.text}</h1>
       {slices.map(({ slice_type, primary }, i) => getSlice(slice_type, primary, `key_${i}`))}
     </Layout>

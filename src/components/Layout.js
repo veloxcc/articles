@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
 
 import 'milligram';
 import './layout.css';
 
-const Layout = ({ children, pageTitle }) => (
+const Layout = ({ children, pageTitle, showLinkToIndex = false }) => (
   <>
     <Helmet>
       <link
@@ -18,7 +19,7 @@ const Layout = ({ children, pageTitle }) => (
       <header>
         <div className="row">
           <div className="column">
-            <a href="/">velox.cc</a> / articles
+            <a href="/">velox.cc</a> / {showLinkToIndex ? <Link to="/">articles</Link> : 'articles'}
           </div>
         </div>
       </header>
